@@ -1,16 +1,19 @@
 ### Hi there 👋
 
-<!--
-**ar1vit0r/ar1vit0r** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**[> Visit my Portfolio](https://ar1vit0r.github.io)**
 
-Here are some ideas to get you started:
+🔭 Currently working on: AI agents, LLMs, and open source tools
+🌱 Currently learning: Agentic AI, computer vision, CUDA
+💬 Ask me about: Python, C/C++, Elixir, machine learning, systems programming
+📫 How to reach me: [GitHub](https://github.com/ar1vit0r)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```python
+class Ar1vit0r:
+    def __init__(self):
+        self.role = "Developer"
+        self.interests = ["AI/ML", "Open Source", "Systems"]
+        self.tools = ["Python", "C++", "Neovim", "Linux"]
+
+    def say_hi(self):
+        return "Thanks for stopping by!"
+```
