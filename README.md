@@ -4,7 +4,7 @@
 
 #### ⚡ About me
 - 🎓 M.Sc. in Computer Science @ UFPel
-- 🤖 AI/ML Engineer — building local-first AI agents
+- 🤖 AI/ML Engineer — helping to make scifi real
 - 🔐 LangGraph Foundation Certified
 - 🌎 Capão do Leão, RS, Brazil
 
