@@ -18,7 +18,7 @@ Agentic AI, computer vision, CUDA
 Python, C/C++, Haskell, machine learning, systems programming, LangGraph, FastAPI
 
 #### 📫 Contact
-[LinkedIn](https://linkedin.com/in/ar1vit0r) | [arivitordasilva@gmail.com](mailto:arivitordasilva@gmail.com)
+[LinkedIn](https://linkedin.com/in/ar1vit0r) | [avdslazzarotto@inf.ufpel.edu.br](mailto:avdslazzarotto@inf.ufpel.edu.br)
 
 ---
 
