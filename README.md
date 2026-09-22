@@ -4,9 +4,9 @@
 
 #### ⚡ About me
 - 🎓 M.Sc. in Computer Science @ UFPel
-- 🤖 AI/ML Engineer — helping to make scifi real
+- 🐍 Python Developer | Data & Backend
 - 🔐 LangGraph Foundation Certified
-- 🌎 Capão do Leão, RS, Brazil
+- 🌎 Caxias do Sul, RS, Brazil
 
 #### 🔭 Current work
 AI agents, LLMs, security hardening for agentic systems, multimodal vision-language models
@@ -30,8 +30,8 @@ Python, C/C++, Haskell, machine learning, systems programming, LangGraph, FastAP
 ```python
 class Ar1vit0r:
     def __init__(self):
-        self.role = "AI/ML Engineer"
-        self.interests = ["AI/ML", "Open Source", "Systems"]
+        self.role = "Python Developer | Data & Backend"
+        self.interests = ["Data", "Backend", "Open Source", "Systems"]
         self.tools = ["Python", "C++", "Haskell", "Neovim", "Linux"]
 
     def say_hi(self):
