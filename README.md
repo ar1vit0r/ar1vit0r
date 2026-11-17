@@ -52,8 +52,8 @@
 
 <div align="center">
 
-<img height="165" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=ar1vit0r&show_icons=true&hide_border=true&bg_color=070000&title_color=ff2a2a&text_color=ff8a8a&icon_color=ff2a2a&ring_color=ff2a2a"/>
-<img height="165" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ar1vit0r&layout=compact&hide_border=true&bg_color=070000&title_color=ff2a2a&text_color=ff8a8a"/>
+<img height="165" alt="GitHub stats" src="stats.svg"/>
+<img height="165" alt="Top languages" src="langs.svg"/>
 
 <img src="footer.svg" alt="End of transmission" width="100%"/>
 
