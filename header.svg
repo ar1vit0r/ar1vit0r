@@ -1,96 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="ar1vit0r, Python developer, data and backend. T-800 style HUD header">
-  <style>
-    .mono { font-family: 'Courier New', Consolas, monospace; }
-    .red  { fill: #ff2a2a; }
-    .mid  { fill: #c41e1e; }
-    .dim  { fill: #7a1414; }
-    .name { font-size: 62px; font-weight: 700; letter-spacing: 8px; }
-    .sub  { font-size: 16px; letter-spacing: 3px; }
-    .sm   { font-size: 12px; letter-spacing: 2px; }
-    .blink { animation: blink 1.1s steps(2, start) infinite; }
-    .sweep { animation: sweep 5s linear infinite; }
-    .spin  { transform-origin: 790px 150px; animation: spin 14s linear infinite; }
-    .spinr { transform-origin: 790px 150px; animation: spin 22s linear infinite reverse; }
-    .tick  { animation: tick 30s linear infinite; }
-    .pulse { animation: pulse 2s ease-in-out infinite; }
-    @keyframes blink { to { visibility: hidden; } }
-    @keyframes sweep { from { transform: translateY(-20px); } to { transform: translateY(320px); } }
-    @keyframes spin  { to { transform: rotate(360deg); } }
-    @keyframes tick  { from { transform: translateX(0); } to { transform: translateX(-860px); } }
-    @keyframes pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
-  </style>
-  <defs>
-    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1" fill="#ff2a2a" opacity="0.06"/>
-    </pattern>
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M30 0 H0 V30" fill="none" stroke="#ff2a2a" stroke-width="0.5" opacity="0.10"/>
-    </pattern>
-    <radialGradient id="vig" cx="50%" cy="50%" r="75%">
-      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000" stop-opacity="0.85"/>
-    </radialGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <clipPath id="tickclip"><rect x="40" y="268" width="820" height="22"/></clipPath>
-  </defs>
-
-  <rect width="900" height="300" fill="#070000"/>
-  <rect width="900" height="300" fill="url(#grid)"/>
-  <rect width="900" height="300" fill="url(#scan)"/>
-  <rect class="sweep" x="0" y="0" width="900" height="16" fill="#ff2a2a" opacity="0.07"/>
-
-  <!-- status bar -->
-  <rect x="0" y="0" width="900" height="28" fill="#1a0000"/>
-  <line x1="0" y1="28" x2="900" y2="28" stroke="#ff2a2a" stroke-width="1" opacity="0.6"/>
-  <circle class="pulse" cx="22" cy="14" r="4" fill="#ff2a2a"/>
-  <text class="mono red sm" x="34" y="18">SYS.ONLINE</text>
-  <text class="mono dim sm" x="270" y="18">CYBERDYNE SYSTEMS // MODEL 101 // SERIES 800</text>
-  <text class="mono red sm" x="800" y="18">NET: ACTIVE</text>
-
-  <!-- frame corners -->
-  <g stroke="#ff2a2a" stroke-width="2" fill="none">
-    <path d="M12 52 V40 H24"/><path d="M876 40 H888 V52"/>
-    <path d="M12 248 V260 H24"/><path d="M888 248 V260 H876"/>
-  </g>
-
-  <!-- reticle -->
-  <g stroke="#ff2a2a" fill="none" stroke-width="1.5">
-    <circle cx="790" cy="150" r="78" opacity="0.75"/>
-    <circle cx="790" cy="150" r="52" opacity="0.4"/>
-    <circle cx="790" cy="150" r="5" fill="#ff2a2a" filter="url(#glow)"/>
-    <path d="M790 58 V100 M790 200 V242 M698 150 H740 M840 150 H882"/>
-    <g class="spin"><path d="M790 62 A88 88 0 0 1 878 150" stroke-dasharray="6 10" opacity="0.9"/></g>
-    <g class="spinr"><circle cx="790" cy="150" r="92" stroke-dasharray="2 9" opacity="0.5"/></g>
-  </g>
-  <text class="mono mid sm" x="728" y="254">TARGET ACQUIRED</text>
-
-  <!-- identity -->
-  <text class="mono dim sm" x="40" y="62">TARGET ID</text>
-  <text class="mono red name" x="38" y="124" filter="url(#glow)">AR1VIT0R</text>
-  <text class="mono red sub" x="42" y="156">PYTHON DEVELOPER // DATA &amp; BACKEND</text>
-  <text class="mono mid sm" x="42" y="180">M.SC. COMPUTER SCIENCE, UFPEL  |  CAXIAS DO SUL, RS</text>
-
-  <!-- readouts -->
-  <g class="mono sm">
-    <rect x="40"  y="204" width="196" height="26" fill="none" stroke="#ff2a2a" opacity="0.7"/>
-    <text class="red" x="52"  y="221">PYTHON ..... PRIMARY</text>
-    <rect x="248" y="204" width="196" height="26" fill="none" stroke="#ff2a2a" opacity="0.7"/>
-    <text class="red" x="260" y="221">RAILS ...... ACTIVE</text>
-    <rect x="456" y="204" width="196" height="26" fill="none" stroke="#ff2a2a" opacity="0.7"/>
-    <text class="red" x="468" y="221">SQL / ETL .. ACTIVE</text>
-  </g>
-
-  <!-- ticker -->
-  <line x1="40" y1="262" x2="860" y2="262" stroke="#ff2a2a" stroke-width="1" opacity="0.4"/>
-  <g clip-path="url(#tickclip)">
-    <g class="tick mono mid sm">
-      <text x="40"  y="284" textLength="860" lengthAdjust="spacing">PYTHON  //  POSTGRESQL  //  DBT  //  RAILS 8  //  RUST  //  CI/CD  //  LLM EVALS  //  AI AGENTS  //  LANGGRAPH  //  </text>
-      <text x="900" y="284" textLength="860" lengthAdjust="spacing">PYTHON  //  POSTGRESQL  //  DBT  //  RAILS 8  //  RUST  //  CI/CD  //  LLM EVALS  //  AI AGENTS  //  LANGGRAPH  //  </text>
-    </g>
-  </g>
-
-  <rect width="900" height="300" fill="url(#vig)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="Terminator themed banner. T-800 CPU board header">
+<style>text{font-family:'Courier New',Consolas,monospace} .si{fill:#a9b1b9} .red{fill:#ff2a2a} .silk{font-size:10px;letter-spacing:2px;fill:#4a5560}
+.name{font-size:72px;font-weight:700;letter-spacing:10px} .sub{font-size:14px;letter-spacing:3px}
+.pulse{stroke-dasharray:14 260;animation:flow 3s linear infinite} .p2{animation-delay:.8s;animation-duration:3.6s} .p3{animation-delay:1.6s;animation-duration:4.2s}
+.led{animation:led 1.6s ease-in-out infinite} .cell{fill:#ff2a2a;opacity:.55;animation:cell 3s steps(1) infinite}
+.core{transform-box:fill-box;transform-origin:bottom;fill:#ff2a2a;animation:core 2.4s ease-in-out infinite}
+@keyframes flow{from{stroke-dashoffset:274}to{stroke-dashoffset:0}} @keyframes led{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes cell{0%{opacity:.15}35%{opacity:.8}70%{opacity:.3}} @keyframes core{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } }</style>
+<defs>
+<linearGradient id="chip" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171b1f"/><stop offset="1" stop-color="#06080a"/></linearGradient>
+<linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".08"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="#2a3036"/></pattern>
+</defs>
+<rect width="900" height="300" fill="#050607"/><rect width="900" height="300" fill="url(#dots)"/>
+<g fill="none" stroke="#4a1616" stroke-width="3" stroke-linejoin="round">
+<path d="M210 100H120V50H20"/><path d="M210 130H70V90H0"/><path d="M210 160H90V210H0"/><path d="M210 190H140V250H20"/>
+<path d="M690 100H780V50H900"/><path d="M690 130H830V90H900"/><path d="M690 160H810V210H900"/><path d="M690 190H760V250H880"/>
+<path d="M300 70V20H420"/><path d="M600 70V20H480"/><path d="M300 200V280H420"/><path d="M600 200V280H480"/>
+<path d="M210 115H40V150H0" stroke-width="2" stroke="#2a1010"/><path d="M690 175H860V150H900" stroke-width="2" stroke="#2a1010"/>
+</g>
+<g fill="none" stroke="#ff2a2a" stroke-width="3" stroke-linecap="round" filter="url(#glow)">
+<path class="pulse" d="M210 100H120V50H20"/><path class="pulse p2" d="M690 130H830V90H900"/><path class="pulse p3" d="M210 160H90V210H0"/>
+<path class="pulse p2" d="M690 190H760V250H880"/><path class="pulse p3" d="M300 70V20H420"/><path class="pulse" d="M600 200V280H480"/>
+<path class="pulse p2" d="M210 130H70V90H0"/><path class="pulse" d="M690 100H780V50H900"/>
+</g>
+<g fill="#050607" stroke="#7d8892" stroke-width="2"><circle cx="20" cy="50" r="5"/><circle cx="880" cy="250" r="5"/><circle cx="20" cy="250" r="5"/><circle cx="420" cy="20" r="5"/><circle cx="480" cy="280" r="5"/><circle cx="480" cy="20" r="5"/><circle cx="420" cy="280" r="5"/></g>
+<rect x="720" y="14" width="12" height="22" rx="3" fill="#1a1e22" stroke="#7d8892" stroke-width="1.5"/><line x1="720" y1="22" x2="732" y2="22" stroke="#ff2a2a" stroke-width="1.5"/><rect x="742" y="14" width="12" height="22" rx="3" fill="#1a1e22" stroke="#7d8892" stroke-width="1.5"/><line x1="742" y1="22" x2="754" y2="22" stroke="#ff2a2a" stroke-width="1.5"/><rect x="764" y="14" width="12" height="22" rx="3" fill="#1a1e22" stroke="#7d8892" stroke-width="1.5"/><line x1="764" y1="22" x2="776" y2="22" stroke="#ff2a2a" stroke-width="1.5"/>
+<text class="silk" x="40" y="290">U1  REV 101</text><text class="silk" x="860" y="290" text-anchor="end">NEURAL NET</text>
+<g fill="#7d8892"><rect x="198" y="96" width="12" height="8"/><rect x="198" y="126" width="12" height="8"/><rect x="198" y="156" width="12" height="8"/><rect x="198" y="186" width="12" height="8"/>
+<rect x="690" y="96" width="12" height="8"/><rect x="690" y="126" width="12" height="8"/><rect x="690" y="156" width="12" height="8"/><rect x="690" y="186" width="12" height="8"/>
+<rect x="296" y="62" width="8" height="12"/><rect x="596" y="62" width="8" height="12"/><rect x="296" y="196" width="8" height="12"/><rect x="596" y="196" width="8" height="12"/></g>
+<rect x="210" y="70" width="480" height="138" rx="8" fill="url(#chip)" stroke="#7d8892" stroke-width="2"/>
+<rect x="210" y="70" width="480" height="138" rx="8" fill="url(#shine)"/>
+<rect x="238" y="104" width="424" height="70" rx="3" fill="none" stroke="#3a434b"/>
+<circle cx="222" cy="214" r="4" fill="#0e1114" stroke="#7d8892"/><line x1="219" y1="211" x2="225" y2="217" stroke="#7d8892"/><circle cx="678" cy="214" r="4" fill="#0e1114" stroke="#7d8892"/><line x1="675" y1="211" x2="681" y2="217" stroke="#7d8892"/><circle cx="678" cy="64" r="4" fill="#0e1114" stroke="#7d8892"/><line x1="675" y1="61" x2="681" y2="67" stroke="#7d8892"/><circle cx="222" cy="64" r="4" fill="#0e1114" stroke="#7d8892"/><line x1="219" y1="61" x2="225" y2="67" stroke="#7d8892"/><circle class="led" style="animation-delay:-0.0s" cx="230" cy="90" r="4" fill="#ff2a2a" filter="url(#glow)"/><circle class="led" style="animation-delay:-0.4s" cx="246" cy="90" r="4" fill="#ff2a2a" filter="url(#glow)"/><circle class="led" style="animation-delay:-0.8s" cx="262" cy="90" r="4" fill="#ff2a2a" filter="url(#glow)"/><circle class="led" style="animation-delay:-1.2s" cx="278" cy="90" r="4" fill="#ff2a2a" filter="url(#glow)"/><rect class="cell" style="animation-delay:-0.00s" x="318" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-0.00s" x="318" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-0.43s" x="335" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-0.43s" x="335" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-0.86s" x="352" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-0.86s" x="352" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-1.29s" x="369" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-1.29s" x="369" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-1.72s" x="386" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-1.72s" x="386" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-2.15s" x="403" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-2.15s" x="403" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-2.58s" x="420" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-2.58s" x="420" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-0.01s" x="437" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-0.01s" x="437" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-0.44s" x="454" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-0.44s" x="454" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-0.87s" x="471" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-0.87s" x="471" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-1.30s" x="488" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-1.30s" x="488" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-1.73s" x="505" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-1.73s" x="505" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-2.16s" x="522" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-2.16s" x="522" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-2.59s" x="539" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-2.59s" x="539" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-0.02s" x="556" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-0.02s" x="556" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-0.45s" x="573" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-0.45s" x="573" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-0.88s" x="590" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-0.88s" x="590" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-1.31s" x="607" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-1.31s" x="607" y="194" width="12" height="8"/><rect class="cell" style="animation-delay:-1.74s" x="624" y="80" width="12" height="8"/><rect class="cell" style="animation-delay:-1.74s" x="624" y="194" width="12" height="8"/><rect class="core" style="animation-delay:-0.0s" x="250" y="184" width="8" height="18"/><rect class="core" style="animation-delay:-0.4s" x="264" y="184" width="8" height="18"/><rect class="core" style="animation-delay:-0.8s" x="278" y="184" width="8" height="18"/><rect class="core" style="animation-delay:-1.2s" x="292" y="184" width="8" height="18"/>
+<text class="si name" x="450" y="148" text-anchor="middle" filter="url(#glow)">T-800</text>
+<text class="red sub" x="450" y="170" text-anchor="middle">NEURAL NET PROCESSOR</text>
 </svg>
